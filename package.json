@@ -1,36 +1,47 @@
 {
   "engines": {
-    "node": "18.17.1"
+    "node": "21.7.1"
   },
-  "name": "majorproject",
+  "name": "aasaan_aavaas",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to Aasaan Aavaas, your hassle-free solution for finding comfortable and convenient accommodations for your dream vacation.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiragyadav916/Aasaan_Aavaas.git"
+  },
+  "keywords": [
+    "Flat",
+    "Accomodations\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b_a\u001b[D\u001b[D\u001b[D\u001b[D\u001b[f"
+  ],
+  "author": "Chirag Yadav",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chiragyadav916/Aasaan_Aavaas/issues"
+  },
+  "homepage": "https://github.com/chiragyadav916/Aasaan_Aavaas#readme",
   "dependencies": {
-    "@mapbox/mapbox-sdk": "^0.15.6",
-    "cloudinary": "^1.41.3",
+    "@mapbox/mapbox-sdk": "^0.15.5",
+    "cloudinary": "^2.5.1",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.9",
     "ejs-mate": "^4.0.0",
     "express": "^4.21.2",
     "express-session": "^1.18.1",
-    "joi": "^17.11.0",
+    "joi": "^17.12.2",
     "method-override": "^3.0.0",
-    "mongodb": "^6.2.0",
-    "mongoose": "^7.8.6",
+    "mongoose": "^8.9.5",
     "multer": "^1.4.5-lts.1",
     "multer-storage-cloudinary": "^4.0.0",
-    "passport": "^0.6.0",
-    "passport-google-oauth2": "^0.2.0",
+    "passport": "^0.7.0",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^8.0.0"
+    "passport-local-mongoose": "^8.0.0",
+    "serve-favicon": "^2.5.0"
   }
 }

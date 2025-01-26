@@ -1,58 +1,56 @@
+<!-- navbar boilerplate -->
+
 <style>
-  
-  .btn-search:hover{
-    background-color: #fe424d;
-    color: #ffff;
-  }
-  .btn-search{
-    background-color: #fe424d;
-    color: #ffff;
-    border-radius: 25px;
-    padding: 0 1rem 0 1rem;
-  }
-  .btn-search i {
-    display: inline;
-    margin-right: 0.5rem;
-  }
-  .search-input{
-    border-radius: 20px;
-    padding: 0.5rem 3rem 0.5rem 3rem;
-  }
+    .search-btn {
+        background-color: rgb(255, 204, 0) !important;
+        color: black;
+        border-radius: 25px;
+        padding: 0 1rem 0 1rem;
+    }
 
-  
+    .search-btn i {
+        display: inline;
+    }
 
+    .search-inp {
+        border-radius: 25px;
+        padding: 0.5rem 3rem 0.5rem 3rem;
+        font-size: 1rem;
+    }
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/listings"><i class="fa-solid fa-ghost"></i></i></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          
-          <a class="nav-link logo" href="/listings">WanderLust</a>
-        </ul>
+        <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <!-- <a class="nav-link" aria-current="page" href="/">Home</a> -->
+                <!-- <a class="nav-link" href="/listings">Explore</a> -->
+                <a class="nav-link" href="/listings"><h1><b>Aasaan Aavaas </b></h1></a>
+            </div>
+
+            <div class="navbar-nav  ms-auto">
+                <form class="d-flex" role="'search">
+                    <input class="form-control me-2 search-inp" type="search" placeholder="Search Destination">
+                    <a class="btn search-btn" href="/listings/"><button class="btn search-btn mt-2" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i>&nbsp;Search</button></a>
+                </form>
+            </div>
+
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/listings/new">Add New Listing</a>
+                <% if(!currUser) {%>
+                    <a class="nav-link" aria-current="page" href="/signup"><b>Sign Up</b></a>
+                    <a class="nav-link" href="/login"><b>Log In</b></a>
+                    <% } %>
+                        <% if(currUser) {%>
+                            <a class="nav-link" href="/logout"><b>Log Out</b></a>
+                            <% } %>
+            </div>
+
         </div>
-          <div class="navbar-nav ms-auto">
-            <form class="d-flex" role="search" >
-              <input class="form-control me-2 search-input" type="search" placeholder="Search destination">
-              <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass-location"></i>Search</button>
-            </form>
-          </div>
-          
-        
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/listings/new">Add your home</a>
-          <% if (!currUser) { %>
-            <a class="nav-link "  href="/signup"><b>SignUp</b></a>
-            <a class="nav-link" href="/login"><b>Login</b></a>
-          <%} %>
-          <% if (currUser) { %>
-          <a class="nav-link" href="/logout"><b>Log Out</b></a>
-          <%} %>
-        </div>
-      </div>
     </div>
-  </nav>
+</nav>
