@@ -1,16 +1,19 @@
 const Listing = require("../models/listing");
 const mapToken = process.env.MAP_TOKEN;
-var NodeGeocoder = require('node-geocoder');
-var options = {
-    provider: 'tomtom',
-  
-    // Optionnal depending of the providers
-    httpAdapter: 'https', // Default
-    apiKey: mapToken, // for Mapquest, OpenCage, Google Premier
-    formatter: null         // 'gpx', 'string', ...
-  };
 
-  const geocoder = NodeGeocoder(options);
+if (!mapToken) {
+  throw new Error("MAP_TOKEN is not defined. Set the environment variable.");
+}
+
+const options = {
+  provider: "tomtom",
+  apiKey: mapToken, // Ensure this is correctly set
+  httpAdapter: "https",
+  formatter: null
+};
+
+const geocoder = require("node-geocoder")(options);
+
   
 
 module.exports.index = async (req, res) => {
