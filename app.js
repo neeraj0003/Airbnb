@@ -2,19 +2,11 @@ if(process.env.NODE_ENV != "production"){
   require("dotenv").config();
 }
 
-// Import the Mapbox SDK
-const mapboxClient = require('@mapbox/mapbox-sdk');
-// Create a Mapbox client instance using the access token
-const MapboxClient = mapboxClient({ accessToken: process.env.MAPBOX_ACCESS_TOKEN });
-// Example usage of the Mapbox client
-const geocodingService = require('@mapbox/mapbox-sdk/services/geocoding');
-const geocodingClient = geocodingService(MapboxClient);
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-// Import the Mapbox SDK
-const mapboxClient = require('@mapbox/mapbox-sdk');
-;
+
+
 
 const dbUrl =process.env.ATLASDB_URL;
 
