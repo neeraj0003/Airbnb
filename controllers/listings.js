@@ -1,10 +1,9 @@
 const Listing = require("../models/listing");
 const mapToken = process.env.MAP_TOKEN;
 
-if (!mapToken) {
-  throw new Error("MAP_TOKEN is not defined. Set the environment variable.");
+if (!process.env.MAP_TOKEN) {
+    throw new Error("MAP_TOKEN is not defined. Set the environment variable.");
 }
-
 const options = {
   provider: "tomtom",
   apiKey: mapToken, // Ensure this is correctly set
