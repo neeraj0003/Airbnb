@@ -6,9 +6,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 
-const MapboxClient = require('@mapbox/mapbox-sdk');
-const mapboxClient = MapboxClient({ accessToken: process.env.MAPBOX_ACCESS_TOKEN });
-
 
 
 const dbUrl =process.env.ATLASDB_URL;
