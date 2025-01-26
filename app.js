@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const app = express();
 
 
+// Import the Mapbox SDK
+const mapboxClient = require('@mapbox/mapbox-sdk');
 
 const dbUrl =process.env.ATLASDB_URL;
 
