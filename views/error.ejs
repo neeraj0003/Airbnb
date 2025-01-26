@@ -1,11 +1,8 @@
-<!-- webpage to show error -->
+<% layout("/layouts/boilerplate") %>
 
-<% layout('/layouts/boilerplate') -%>
-
-    <div class="row">
-        <div class="alert alert-danger col-6 offset-3" role="alert">
-            <h4 class="alert-heading">
-                <%= message%>
-            </h4>
-        </div>
-    </div>
+<div class="row mt-3">
+    <div class="alert alert-danger col-6 offset-3" role="alert">
+ 
+         <p class="alert-heading"><%=message %></p>
+      </div>
+</div>

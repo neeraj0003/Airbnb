@@ -1,163 +1,135 @@
-/* giving styling to elements */
-
-body {
-    font-family: "Comic Neue", cursive !important;
-    font-weight: 500 !important;
-    font-style: normal;
-    font-optical-sizing: auto;
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.container {
+.container{
     flex: 1;
 }
 
 /* Navbar */
-.navbar {
+.navbar{
     height: 5rem;
     background-color: white;
 }
 
-.fa-compass {
-    color: rgb(255, 204, 0);
-    font-size: 2rem;
+.fa-ghost{
+    color: #fe424d;
+    font-size: 3rem;
 }
 
-.nav-link {
+.nav-link{
     color: #222222 !important;
-    /*to overcome the styling of bootstrap*/
-    opacity: 0.8;
 }
 
-.nav-link:hover{
-    opacity: 1;
-    scale: 1.1;
+.navbar-nav .logo{
+    color: #fe424d !important;
+    font-weight: 1000 !important;
+    font-size: 30px !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+ 
+    
 }
-
-/*Footer*/
-.f-info-links {
+/* Footer */
+.f-info-links a {
     text-decoration: none;
     color: #222222;
+    transition: 0.3s;
 }
-
 .f-info-links a:hover {
     text-decoration: underline;
+    color: #222222;
+    transform: scale(1.1);
 }
 
-.f-info-links,
-.f-info-socials {
+.f-info-links , .f-info-socials , .f-info-brand{ 
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.f-info-brand {
-    margin-top: 1.1rem;
-}
 
-.f-info-socials i {
+.f-info-socials i{
     margin-right: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
-
-.f-info {
+.f-info{
     text-align: center;
-    height: 8rem;
     display: flex;
+    height: 8rem;
     background-color: #ebebeb;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: space-evenly;
 }
 
 /* Cards */
-.listing-card {
+
+.listing-card{
     border: none !important;
     margin-bottom: 2rem;
-}
 
-.card-img-top {
+}
+.card-img-top{
     border-radius: 1rem !important;
-    width: 95% !important;
-    object-fit: cover !important;
-}
+    width: 100% !important;
+    object-fit: cover;
 
-.card-body {
+}
+.card-body{
     padding: 0 !important;
 }
-
 .card-text p {
-    font-weight: 400;
-}
+    font-weight: 400 !important;
 
-.listing-link {
+}
+.listing-link{
     text-decoration: none;
 }
 
-/*Cards Effects*/
-.card-img-overlay {
+/* Card-Effect */
+
+.card-img-overlay{
     opacity: 0;
 }
-
-.card-img-overlay:hover {
+.card-img-overlay:hover{
     opacity: 0.2;
     background-color: white;
 }
 
-/* CSS for hover zoom out effect */
-.home-img {
-    transition: transform 0.3s ease;
-    /* Smooth transition */
-}
-
-.home-img:hover {
-    transform: scale(1.1);
-    /* Zoom out effect on hover */
-}
-
-/*New Page*/
-.add-btn {
-    background-color: rgb(255, 204, 0) !important;
+/* New Page */
+.add-btn{
+    background-color:  #fe424d !important;
     border: none !important;
-    color: black !important;
 }
 
-/*Edit Page*/
-.edit-btn {
-    background-color: rgb(255, 204, 0) !important;
+/* Edit Page */
+.edit-btn{
+    background-color:  #fe424d !important;
     border: none !important;
-    color: black !important;
 }
 
-/*Show Page*/
-.show-img {
-    height: 40vh;
+/* Show Image */
+.show-img{
+    height: 30vh;
 }
 
-.btns {
+.btns{
     display: flex;
 }
 
-.rev-btn {
-    background-color: rgb(255, 204, 0) !important;
-    border: none !important;
-    color: black !important;
-}
-
-.socials-btn {
-    color: black !important;
-}
-
-.show-card {
+.show-card{
     padding-left: 0;
     padding-right: 0;
 }
 
-/* Map */
+/* MAp */
+
 #map {
     height: 400px;
-    width: 88vh;
-    border-radius: 1rem !important;
+    width: 80vh;
+
 }

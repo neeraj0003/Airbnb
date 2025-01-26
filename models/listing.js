@@ -1,51 +1,52 @@
-// delecaring schema for Listing
-
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const Review = require("./review.js");
 
-const lisitingSchema = new Schema({
-    title: {
-        type: String,
-        required: true,
+const listingSchema = new Schema ({
+    title : {
+        type : String,
+        required:true,
     },
-    description: String,
-    image: {
-        url: String,
-        filename: String,
-    },
-    price: Number,
-    location: String,
-    country: String,
-    reviews: [//review model
+    description : String,
+    image : {
+        url:String,
+        filename:String,
+    }, 
+    price : Number,
+    location : String,
+    country : String,
+
+    reviews : [
         {
-            type: Schema.Types.ObjectId, //storing object for particular reviews
-            ref: "Review"//reference is review model
+            type : Schema.Types.ObjectId,
+            ref : "Review",
         }
     ],
-    owner: {
-        type: Schema.Types.ObjectId,
-        ref: "User",
+    owner : {
+        type : Schema.Types.ObjectId,
+        ref : "User",
     },
-    geometry: {
+    geometry : {
         type: {
-            type: String, // Don't do `{ location: { type: String } }`
-            enum: ['Point'], // 'location.type' must be 'Point'
-            required: true
+          type: String, // Don't do `{ location: { type: String } }`
+          enum: ['Point'], // 'location.type' must be 'Point'
+          required: true
         },
         coordinates: {
-            type: [Number],
-            required: true
+          type: [Number],
+          required: true
         }
-    }
+    },
+  
 });
 
-//creating middleware for deleting all reviews assocaited to particular listing
-lisitingSchema.post("findOneAndDelete", async (listing) => {
-    if (listing) {//if any listing is come
-        await Review.deleteMany({ _id: { $in: listing.reviews } });
+listingSchema.post("findOneAndDelete", async (listing) => {
+    if(listing){
+        await Review.deleteMany({_id : {$in : listing.reviews}});
     }
-})
+    
+});
 
-const Listing = mongoose.model("Listing", lisitingSchema);
+const Listing = mongoose.model("Listing",listingSchema);
+
 module.exports = Listing;
