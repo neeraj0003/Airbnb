@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const Review = require("./review.js");
-const cloudConfig = require('../cloudConfig.js'); // Ensure this path is correct
 
 const listingSchema = new Schema({
     title: {
