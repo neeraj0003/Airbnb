@@ -22,7 +22,7 @@ const userRouter = require("./routes/user.js");
 
 
  const dbUrl = process.env.ATLASDB_URL;
-// const dbUrl ="mongodb://127.0.0.1:27017/VoyagerVibes";
+// const dbUrl ="mongodb://127.0.0.1:27017/Airbnb";
 
 main()
 	.then(() => {
