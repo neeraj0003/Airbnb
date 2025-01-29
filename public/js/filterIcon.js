@@ -5,7 +5,7 @@ filterClick = () => {
   page.classList.add("containerblur");
 };
 
-closefilter = () =>{
+closefilter = () => {
   containerbtn.classList.remove("filterbtnClick");
-  page.classList.remove("containerblur");  
-}
+  page.classList.remove("containerblur");
+};
