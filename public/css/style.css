@@ -82,6 +82,7 @@ color: #222222;
 
     .card-body  {
         padding: 0 !important;
+        
     }
 
     .card-text p {
@@ -90,6 +91,7 @@ font-weight: 400 !important;
 
     .listing-link {
         text-decoration: none;
+        color: #000;
     }
 
     /* card effect */
