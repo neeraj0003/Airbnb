@@ -35,7 +35,7 @@ const initDB = async (req, res) => {
 
   initData.data = initData.data.map((obj) => ({
     ...obj,
-    owner: "666f27fcb156a182ceeef494",
+    owner: "6795488d5a6e27b1b2dbeddf",
   }));
 
   await Listing.insertMany(initData.data);
@@ -43,4 +43,3 @@ const initDB = async (req, res) => {
 };
 
 initDB();
-// 6656ca2098ff82c0d34a12ed

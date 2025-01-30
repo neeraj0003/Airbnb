@@ -17,9 +17,6 @@ router.route("/").get(wrapAsync(listingController.index)).post(
   validateListing,
   wrapAsync(listingController.createListing)
 );
-// .post(, (req, res) => {
-//   res.send(req.file);
-// });
 
 // New Route
 router.get("/new", isLoggedIn, listingController.renderNewForm);
