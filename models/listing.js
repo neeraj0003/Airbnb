@@ -11,6 +11,17 @@ const listingSchema = new Schema({
   image: {
     url: String,
     filename: String,
+
+    // fileName: String,
+
+    // url: {
+    //     type: String,
+    //     default: "https://images.unsplash.com/photo-1602685234860-3d38ee425ae8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    //     set: (v) => v === ""
+
+    //         ? "https://images.unsplash.com/photo-1602685234860-3d38ee425ae8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" : v,
+
+    // },
   },
   price: Number,
   location: String,
@@ -21,14 +32,16 @@ const listingSchema = new Schema({
       ref: "Review",
     },
   ],
+
   owner: {
     type: Schema.Types.ObjectId,
     ref: "User",
   },
+
   geometry: {
     type: {
-      type: String,
-      enum: ["Point"],
+      type: String, // Don't do `{ location: { type: String } }`
+      enum: ["Point"], // 'location.type' must be 'Point'
       required: true,
     },
     coordinates: {
@@ -36,12 +49,14 @@ const listingSchema = new Schema({
       required: true,
     },
   },
-  category: {
-    type: [String],
-  },
+  // additional work
+  //   category: {
+  //     type: String,
+  //     enum: ["mountains", "arctic", "farms", "deserts"],
+  //   },
 });
 
-listingSchema.post("finOneAndDelete", async (listing) => {
+listingSchema.post("findOneAndDelete", async (listing) => {
   if (listing) {
     await Review.deleteMany({ _id: { $in: listing.reviews } });
   }

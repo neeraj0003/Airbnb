@@ -20,20 +20,23 @@
         />
         <div class="valid-feedback">Title looks good!</div>
       </div>
+
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
         <textarea name="listing[description]" class="form-control" required>
-        <%= listing.description %></textarea
+ 
+          <%= listing.description %> </textarea
         >
         <div class="invalid-feedback">Please enter a short description</div>
       </div>
 
       <div class="mb-3">
         Original Listing Image <br />
-        <img src="<%= orignalImageUrl %>" />
+        <img src="<%= originalImageUrl %>" />
       </div>
+
       <div class="mb-3">
-        <label for="image" class="form-label">Upload New Image</label>
+        <label for="image" class="form-label">Upload New Image </label>
         <input name="listing[image]" type="file" class="form-control" />
       </div>
 
@@ -47,8 +50,9 @@
             class="form-control"
             required
           />
-          <div class="invalid-feedback">Price should be valid</div>
+          <div class="invalid-feedback">Please enter a valid Price</div>
         </div>
+
         <div class="mb-3 col-md-8">
           <label for="country" class="form-label">Country</label>
           <input
@@ -58,61 +62,24 @@
             class="form-control"
             required
           />
-          <div class="invalid-feedback">country should be valid</div>
+          <div class="invalid-feedback">Country name should be valid</div>
         </div>
-      </div>
-      <div class="mb-3">
-        <label for="location" class="form-label">Location</label>
-        <input
-          name="listing[location]"
-          value="<%= listing.location %>"
-          type="text"
-          class="form-control"
-          required
-        />
-        <div class="invalid-feedback">Location should be valid</div>
-      </div>
-      <div class="m-b3">
-        <label for="category" class="form-label">Choose Category</label>
-        <div class="category-choose">
-          <p><b>Single choose :</b> Click &nbsp;&nbsp;</p>
-          <p><b>Multiple choose :</b> Ctrl + Click</p>
+
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            name="listing[location]"
+            value="<%= listing.location %>"
+            type="text"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Location should be valid</div>
         </div>
-        <select
-          id="category"
-          name="listing[category]"
-          class="form-select border border-black border-opacity-50 mb-2"
-          multiple
-          required
-          style="font-size: 0.95rem"
-        >
-          <option value="Beachfront">Beachfront</option>
-          <option value="Cabins">Cabins</option>
-          <option value="Omg">OMG</option>
-          <option value="Lake">Lake</option>
-          <option value="Design">Design</option>
-          <option value="Amazing Pools">Amazing pools</option>
-          <option value="Farms">Farms</option>
-          <option value="Amazing Views">Amazing views</option>
-          <option value="Rooms">Rooms</option>
-          <option value="Lakefront">Lakefront</option>
-          <option value="Tiny Homes">Tiny homes</option>
-          <option value="Countryside">Countryside</option>
-          <option value="Treehouse">Treehouse</option>
-          <option value="Trending">Trending</option>
-          <option value="Tropical">Tropical</option>
-          <option value="National Parks">National parks</option>
-          <option value="Casties">Casties</option>
-          <option value="Camping">Camping</option>
-          <option value="Top Of The World">Top of the world</option>
-          <option value="Luxe">Luxe</option>
-          <option value="Iconic Cities">Iconic cities</option>
-          <option value="Earth Homes">Earth homes</option>
-        </select>
-        <div class="invalid-feedback">Choose category name</div>
       </div>
 
       <button class="btn btn-dark edit-btn mt-3">Edit</button>
     </form>
   </div>
 </div>
+<!-- <script src="/js/script.js"></script> -->
